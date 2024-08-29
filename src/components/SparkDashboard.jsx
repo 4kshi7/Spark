@@ -26,10 +26,10 @@ export const SparkDashboard = () => {
             Start Your Influencer Journey with Spark
           </h1>
           <div className="flex gap-4">
-            <button className="font-semibold px-3 py-1 rounded-lg bg-blue-500 text-white">
+            <button className="font-semibold px-3 py-1 rounded-lg bg-black text-white">
               Contact Us
             </button>
-            <button className="font-semibold px-3 py-1 rounded-lg bg-blue-500 text-white">
+            <button className="font-semibold px-3 py-1 rounded-lg bg-black text-white">
               Login
             </button>
           </div>
