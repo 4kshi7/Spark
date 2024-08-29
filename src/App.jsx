@@ -10,7 +10,7 @@ import morestats from "../src//images/morestats.png";
 
 function App() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-5">
       <SparkDashboard />
       <PageLayout
         image={dash}
