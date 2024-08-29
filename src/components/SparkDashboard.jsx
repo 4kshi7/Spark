@@ -4,19 +4,31 @@ import noha from "../images/noha.png";
 import lojain from "../images/lojain.png";
 import image from "../images/shaikh.png";
 
+const buttonCategories = [
+  "Fashion",
+  "Sports",
+  "Entertainment",
+  "Food",
+  "Travel",
+  "Adventure",
+];
+
 export const SparkDashboard = () => {
   return (
     <div className="min-h-screen py-8 px-6 bg-gray-100">
       <header className="mb-8">
         <div className="flex justify-between items-center">
-          <div className="text-2xl font-bold text-black flex items-center">
+          <div className="text-3xl font-bold text-black flex items-center">
             <span className="text-yellow-400 text-3xl">✨</span>
             <span className="ml-2">Spark</span>
           </div>
           <h1 className="text-2xl font-semibold text-center">
             Start Your Influencer Journey with Spark
           </h1>
-          <div className="invisible">Placeholder</div> {/* Keeps the header balanced */}
+          <button className="font-semibold px-3 py-1 rounded-lg bg-black text-white">
+            Login
+          </button>{" "}
+          {/* Keeps the header balanced */}
         </div>
       </header>
 
@@ -33,8 +45,20 @@ export const SparkDashboard = () => {
         </section>
 
         <section className="col-span-2">
-          <div className="flex justify-end mb-4">
-            <button className="text-sm font-semibold">Sort by</button>
+          <div className="flex justify-between mb-4">
+            <div className="flex flex-wrap gap-6">
+              {buttonCategories.map((category, index) => (
+                <button
+                  key={index}
+                  className="text-sm font-semibold bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+            <button className="text-sm font-semibold bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+              Sort by
+            </button>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             {/* Influencer Cards */}
